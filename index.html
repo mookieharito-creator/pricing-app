@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Pricing & Subscription Suite | Nihed Moualek</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#080c14',
+            brandCard: '#0f172a',
+            brandBorder: '#1e293b',
+            accentCyan: '#06b6d4',
+            accentPurple: '#8b5cf6',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom CSS Enhancements & Keyframe Animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+
+    .animate-glow {
+      animation: pulseGlow 8s infinite ease-in-out;
+    }
+
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .popular-glow {
+      box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.3);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080c14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="bg-brandDark text-slate-100 font-sans min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-slate-950">
+
+  <!-- Ambient Ambient Background Illumination -->
+  <div class="fixed top-0 left-1/4 w-[600px] h-[600px] bg-cyan-900/20 rounded-full blur-[160px] pointer-events-none animate-glow"></div>
+  <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[160px] pointer-events-none animate-glow"></div>
+
+  <!-- Main Container -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-16">
+
+    <!-- Header Section -->
+    <header class="text-center space-y-4 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold tracking-widest uppercase">
+        Flexible Software Plans
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+        Simple, Transparent <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-purple-400">Pricing</span>
+      </h1>
+      <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+        Choose the plan that fits your development workflow. Switch between monthly and annual billing at any time.
+      </p>
+    </header>
+
+    <!-- Billing Cycle Toggle Switch -->
+    <section class="flex items-center justify-center gap-4">
+      <span id="label-monthly" class="text-sm font-semibold text-white transition-colors">Monthly Billing</span>
+      <button id="billing-toggle" class="relative w-16 h-8 rounded-full bg-slate-800 border border-slate-700 p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50" aria-label="Toggle Billing Cycle">
+        <span id="toggle-circle" class="block w-6 h-6 rounded-full bg-cyan-400 shadow-md transform transition-transform duration-300 translate-x-0"></span>
+      </button>
+      <div class="flex items-center gap-2">
+        <span id="label-yearly" class="text-sm font-semibold text-slate-400 transition-colors">Annual Billing</span>
+        <span class="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 text-[10px] font-bold tracking-wider uppercase">
+          Save 20%
+        </span>
+      </div>
+    </section>
+
+    <!-- Pricing Cards Grid Container -->
+    <section id="pricing-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <!-- Dynamic JS Rendering Target -->
+    </section>
+
+    <!-- Comparison Highlights Bar -->
+    <section class="glass-panel rounded-3xl p-8 border border-slate-800 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="space-y-1">
+        <h3 class="text-lg font-bold text-white">Need a customized enterprise solution?</h3>
+        <p class="text-slate-400 text-sm">We offer custom SLA contracts, dedicated cloud instances, and 24/7 priority phone support.</p>
+      </div>
+      <a href="mailto:nihedmoualek98@gmail.com" class="shrink-0 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-sm font-semibold transition-all duration-200 active:scale-95">
+        Contact Enterprise Team
+      </a>
+    </section>
+
+    <!-- Frequently Asked Questions Accordion Section -->
+    <section class="max-w-4xl mx-auto space-y-6 pt-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center text-white">Frequently Asked Questions</h2>
+      <div class="space-y-4" id="faq-container">
+        <!-- Dynamic FAQ JS Render -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center pt-12 border-t border-slate-800/80 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Nihed Moualek. Built with modular component architecture.</div>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/mookieharito-creator" target="_blank" class="hover:text-cyan-400 transition-colors">GitHub Repository</a>
+        <a href="mailto:nihedmoualek98@gmail.com" class="hover:text-cyan-400 transition-colors">Support Email</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Interactive Details Modal Overlay -->
+  <div id="modal-overlay" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center z-50 p-4 transition-opacity duration-300 opacity-0">
+    <div class="glass-panel border border-slate-700 rounded-3xl p-6 sm:p-8 max-w-lg w-full space-y-6 relative shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <h3 id="modal-plan-title" class="text-2xl font-bold text-white">Plan Details</h3>
+        <button id="modal-close-btn" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition-colors">✕</button>
+      </div>
+      <div class="space-y-3">
+        <div class="text-xs text-cyan-400 font-semibold uppercase tracking-wider">Plan Overview</div>
+        <p id="modal-plan-desc" class="text-slate-300 text-sm leading-relaxed"></p>
+      </div>
+      <div class="space-y-2">
+        <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Included Specifications</div>
+        <ul id="modal-plan-specs" class="space-y-2 text-sm text-slate-300"></ul>
+      </div>
+      <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+        <div id="modal-plan-price" class="text-xl font-bold text-white"></div>
+        <button id="modal-confirm-btn" class="px-6 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-cyan-500/20">
+          Confirm Subscription
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Complete JavaScript Logic -->
+  <script>
+    // -------------------------------------------------------------
+    // DATA SOURCE (State Management & Datasets)
+    // -------------------------------------------------------------
+    let isYearlyBilling = false;
+
+    const pricingData = [
+      {
+        id: "starter",
+        title: "Starter Plan",
+        subtitle: "Essential tools for personal projects and learning.",
+        monthlyPrice: 9.99,
+        yearlyPrice: 7.99,
+        popular: false,
+        badgeText: null,
+        ctaText: "Start Free Trial",
+        features: [
+          "1 GB Cloud Storage",
+          "Standard Community Support",
+          "Core Web Development Kit",
+          "Single Developer License",
+          "Basic Analytics Panel"
+        ],
+        specifications: [
+          "Deployment limits: 3 active projects",
+          "API rate limit: 1,000 requests/day",
+          "Standard uptime SLA (99.0%)"
+        ],
+        description: "Ideal for individual developers or students building foundational applications and experimenting with vibe coding techniques."
+      },
+      {
+        id: "pro",
+        title: "Professional Plan",
+        subtitle: "Advanced features for serious developers & freelancers.",
+        monthlyPrice: 24.99,
+        yearlyPrice: 19.99,
+        popular: true,
+        badgeText: "Most Popular",
+        ctaText: "Get Pro Access",
+        features: [
+          "50 GB High-Speed Storage",
+          "24/7 Priority Email Support",
+          "Full Component Library Access",
+          "Up to 5 Team Members",
+          "Advanced Analytics & Logs",
+          "Automated Git Integrations"
+        ],
+        specifications: [
+          "Deployment limits: Unlimited projects",
+          "API rate limit: 100,000 requests/day",
+          "High uptime SLA (99.9%)"
+        ],
+        description: "Designed for professional front-end developers requiring scaling headroom, automated pipelines, and premium component kits."
+      },
+      {
+        id: "enterprise",
+        title: "Enterprise Suite",
+        subtitle: "Full capacity, dedicated security, and custom tooling.",
+        monthlyPrice: 59.99,
+        yearlyPrice: 47.99,
+        popular: false,
+        badgeText: null,
+        ctaText: "Unlock Enterprise",
+        features: [
+          "Unlimited Cloud Storage",
+          "Dedicated Account Manager",
+          "Custom AI Workflow Scripts",
+          "Unlimited Team Workspace",
+          "Real-time Collaboration Engine",
+          "SOC2 & Security Audits"
+        ],
+        specifications: [
+          "Dedicated cloud infrastructure",
+          "Unlimited API rate limits",
+          "Custom SLA guaranteed uptime (99.99%)"
+        ],
+        description: "Tailored for organizations needing custom integrations, highest security guarantees, and dedicated technical assistance."
+      }
+    ];
+
+    const faqData = [
+      {
+        q: "Can I upgrade or downgrade my plan at any time?",
+        a: "Yes! You can instantly adjust your plan from your dashboard. Prorated balances will automatically be applied."
+      },
+      {
+        q: "How does the annual billing discount work?",
+        a: "When selecting annual billing, you are billed once per year at a discounted monthly rate, saving 20% compared to monthly billing."
+      },
+      {
+        q: "Is there a free trial period for the plans?",
+        a: "All plans come with a 14-day money-back guarantee. You can test all features risk-free."
+      }
+    ];
+
+    // -------------------------------------------------------------
+    // COMPONENT FACTORY FUNCTION (Refactored Pricing Card Builder)
+    // -------------------------------------------------------------
+    function createPricingCard(plan) {
+      const currentPrice = isYearlyBilling ? plan.yearlyPrice : plan.monthlyPrice;
+
+      const card = document.createElement('article');
+      card.className = `glass-panel rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 relative ${
+        plan.popular ? 'border-cyan-500/60 popular-glow ring-1 ring-cyan-500/40' : 'border-slate-800'
+      }`;
+
+      // Badge for Popular Plan
+      const badgeHTML = plan.popular ? `
+        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-extrabold text-[11px] tracking-wider uppercase shadow-md">
+          ${plan.badgeText}
+        </span>
+      ` : '';
+
+      // Feature Items Builder
+      const featuresHTML = plan.features.map(f => `
+        <li class="flex items-start gap-3 text-slate-300 text-sm">
+          <svg class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>${f}</span>
+        </li>
+      `).join('');
+
+      card.innerHTML = `
+        ${badgeHTML}
+        <div class="space-y-6">
+          <div class="space-y-2">
+            <h3 class="text-2xl font-bold text-white">${plan.title}</h3>
+            <p class="text-slate-400 text-xs leading-relaxed min-h-[36px]">${plan.subtitle}</p>
+          </div>
+
+          <div class="flex items-baseline gap-1 py-2 border-y border-slate-800/80">
+            <span class="text-4xl font-extrabold text-white">$${currentPrice.toFixed(2)}</span>
+            <span class="text-slate-400 text-xs font-medium">/ month</span>
+            ${isYearlyBilling ? '<span class="ml-auto text-[10px] text-purple-400 font-semibold bg-purple-950/60 border border-purple-800/40 px-2 py-0.5 rounded">Billed Annually</span>' : ''}
+          </div>
+
+          <ul class="space-y-3 pt-2">
+            ${featuresHTML}
+          </ul>
+        </div>
+
+        <div class="pt-8 space-y-3">
+          <button data-plan-id="${plan.id}" class="btn-action w-full py-3.5 px-6 rounded-xl text-sm font-bold transition-all duration-200 active:scale-95 cursor-pointer shadow-lg ${
+            plan.popular
+              ? 'bg-cyan-400 hover:bg-cyan-300 text-slate-950 shadow-cyan-500/20'
+              : 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-700'
+          }">
+            ${plan.ctaText}
+          </button>
+          <button data-plan-id="${plan.id}" class="btn-details w-full py-2 text-xs text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer text-center font-medium">
+            View full specifications →
+          </button>
+        </div>
+      `;
+
+      return card;
+    }
+
+    // -------------------------------------------------------------
+    // RENDER CONTROLLERS
+    // -------------------------------------------------------------
+    function renderPricingGrid() {
+      const container = document.getElementById('pricing-grid');
+      container.innerHTML = '';
+      pricingData.forEach(plan => {
+        container.appendChild(createPricingCard(plan));
+      });
+      attachCardEventListeners();
+    }
+
+    function renderFAQ() {
+      const container = document.getElementById('faq-container');
+      container.innerHTML = faqData.map((faq, index) => `
+        <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden transition-all">
+          <button class="faq-toggle w-full px-6 py-4 text-left text-sm font-semibold text-white flex justify-between items-center gap-4 hover:text-cyan-400 transition-colors">
+            <span>${faq.q}</span>
+            <span class="text-slate-400 transform transition-transform duration-200 icon-plus">+</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/50 pt-3">
+            ${faq.a}
+          </div>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('.faq-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const answer = btn.nextElementSibling;
+          const icon = btn.querySelector('.icon-plus');
+          const isHidden = answer.classList.contains('hidden');
+          
+          document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+          document.querySelectorAll('.icon-plus').forEach(i => { i.textContent = '+'; i.style.transform = 'rotate(0deg)'; });
+
+          if (isHidden) {
+            answer.classList.remove('hidden');
+            icon.textContent = '−';
+          }
+        });
+      });
+    }
+
+    // -------------------------------------------------------------
+    // INTERACTIVE MODAL CONTROLLER
+    // -------------------------------------------------------------
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalContent = document.getElementById('modal-content');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+
+    function openModal(planId) {
+      const plan = pricingData.find(p => p.id === planId);
+      if (!plan) return;
+
+      const price = isYearlyBilling ? plan.yearlyPrice : plan.monthlyPrice;
+
+      document.getElementById('modal-plan-title').textContent = plan.title;
+      document.getElementById('modal-plan-desc').textContent = plan.description;
+      document.getElementById('modal-plan-price').textContent = `$${price.toFixed(2)} / month`;
+
+      const specsList = document.getElementById('modal-plan-specs');
+      specsList.innerHTML = plan.specifications.map(spec => `
+        <li class="flex items-center gap-2">
+          <span class="text-cyan-400">▹</span> ${spec}
+        </li>
+      `).join('');
+
+      modalOverlay.classList.remove('hidden');
+      modalOverlay.classList.flex = 'flex';
+      setTimeout(() => {
+        modalOverlay.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      modalOverlay.classList.add('opacity-0');
+      modalContent.classList.remove('scale-100');
+      modalContent.classList.add('scale-95');
+      setTimeout(() => {
+        modalOverlay.classList.add('hidden');
+      }, 300);
+    }
+
+    function attachCardEventListeners() {
+      document.querySelectorAll('.btn-action, .btn-details').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const planId = e.currentTarget.getAttribute('data-plan-id');
+          openModal(planId);
+        });
+      });
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+
+    document.getElementById('modal-confirm-btn').addEventListener('click', () => {
+      alert('Subscription intent registered successfully!');
+      closeModal();
+    });
+
+    // -------------------------------------------------------------
+    // TOGGLE BILLING CYCLE EVENT LISTENER
+    // -------------------------------------------------------------
+    const toggleBtn = document.getElementById('billing-toggle');
+    const toggleCircle = document.getElementById('toggle-circle');
+    const labelMonthly = document.getElementById('label-monthly');
+    const labelYearly = document.getElementById('label-yearly');
+
+    toggleBtn.addEventListener('click', () => {
+      isYearlyBilling = !isYearlyBilling;
+
+      if (isYearlyBilling) {
+        toggleCircle.classList.remove('translate-x-0');
+        toggleCircle.classList.add('translate-x-8');
+        labelMonthly.classList.remove('text-white');
+        labelMonthly.classList.add('text-slate-400');
+        labelYearly.classList.remove('text-slate-400');
+        labelYearly.classList.add('text-white');
+      } else {
+        toggleCircle.classList.remove('translate-x-8');
+        toggleCircle.classList.add('translate-x-0');
+        labelYearly.classList.remove('text-white');
+        labelYearly.classList.add('text-slate-400');
+        labelMonthly.classList.remove('text-slate-400');
+        labelMonthly.classList.add('text-white');
+      }
+
+      renderPricingGrid();
+    });
+
+    // -------------------------------------------------------------
+    // INITIALIZATION ON PAGE LOAD
+    // -------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPricingGrid();
+      renderFAQ();
+    });
+  </script>
+</body>
+</html>
