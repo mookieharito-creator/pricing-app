@@ -1,0 +1,11 @@
+Fix the layout bugs and CSS/HTML typos in the broken pricing card. Then, transform it into a full-featured, production-ready, highly styled pricing application using HTML, Tailwind CSS, and vanilla JavaScript. 
+
+Requirements:
+- Fix the typos: box-shdow -> box-shadow, broken <h2> tags.
+- Make the layout fully responsive (Mobile, Tablet, Desktop) using modern grid systems.
+- Theme & Vibe: Premium dark enterprise theme using deep dark navy (#0b0f17), slate gray, zinc, subtle cyan/purple accent glows, and glassmorphism.
+- Refactor into a modular JavaScript component function createPricingCard(planData).
+- Add interactivity: Monthly/Yearly billing toggle switch with dynamic discount calculation (20% off yearly).
+- Add interactive features modal that opens when clicking "View Full Features" or "Start Trial".
+- Add interactive FAQ accordion section at the bottom.
+- Ensure all CSS animations, dynamic pricing calculations, DOM rendering logic, state management, and event listeners are fully implemented line-by-line without omitting any script or styling.
